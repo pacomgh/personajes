@@ -1,9 +1,11 @@
 
 package examen;
-import java.util.Scanner;
+
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 public class Caballero extends Personaje{
     
-    Scanner leer = new Scanner(System.in);
+    String [] opcionesArma = {"Espada", "Cuchillo", "Arco y Flecha", "Hacha"};
     Arma a;
     
     @Override
@@ -28,32 +30,29 @@ public class Caballero extends Personaje{
     
     public Arma darArma(){        
         switch(menuArma()){
-            case 1:
+            case "Espada":
                 a = new CompEspada();
                 break;
-            case 2:
+            case "Cuchillo":
                 a = new CompCuchillo();
                 break;
-            case 3:
+            case "Arco y Flecha":
                 a = new CompArcoFlecha();
                 break;
-            case 4:
+            case "Hacha":
                 a = new CompHacha();
                 break;        
         }                
         return a;        
     }
     
-    public int menuArma(){
-        int arma;       
-        
-        System.out.println("Elige tu arma\n"
-                + "1) Espada\n"
-                + "2) Cuchillo\n"
-                + "3) Arco & Flecha\n"
-                + "4) Hacha");
-        arma = leer.nextInt();        
-        
-        return arma;
+    public String menuArma(){               
+        return (String)JOptionPane.showInputDialog(null,//contenedor del panel
+                "Elija",//opciones de compra
+                "Eleccion de Armas",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/weapons.jpg"),//imagen
+                opcionesArma,//opciones del menu
+                opcionesArma[0]);//opcion mas recomendable;        
     }
 }

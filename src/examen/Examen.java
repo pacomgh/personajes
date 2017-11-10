@@ -1,43 +1,75 @@
 
 package examen;
 
-import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
+
+//import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Examen {
+    
+    String [] opciones = {"Rey", "Reyna", "Troll", "Caballero"};
    
     Scanner lector = new Scanner(System.in);    
     Personaje p;
     
-    public int menuPersonaje(){
-        int opc;        
-        System.out.println("Elige un personaje\n"
-                + "1) Rey\n"
-                + "2) Reyna\n"
-                + "3) Troll\n"
-                + "4) Caballero");
-        opc = lector.nextInt();        
-        return opc;        
+    public String menuPersonaje(){               
+        return (String)JOptionPane.showInputDialog(null,//contenedor del panel
+                "Elija",//opciones de compra
+                "Personajes",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/shrek-wallpaper.jpg"),//imagen
+                opciones,//opciones del menu
+                opciones[0]);//opcion mas recomendable;        
     }
     
     public Personaje elegirPersonaje(){
         
         switch(menuPersonaje()){
-            case 1:  
+            case "Rey":  
                 p=new Rey();
+                JOptionPane.showInputDialog(null,//contenedor del panel
+                null,//opciones de compra
+                "El Rey",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/caballero.jpg"),//imagen
+                null,//opciones del menu
+                opciones[0]);//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear();
                 break;
-            case 2:
+            case "Reyna":
                 p=new Reyna();
+                JOptionPane.showInputDialog(null,//contenedor del panel
+                null,//opciones de compra
+                "Reyna",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/caballero.jpg"),//imagen
+                null,//opciones del menu
+                opciones[0]);//opcion mas recomendable; 
                 //l.add(p);
                 break;
-            case 3:
+            case "Troll":
                 p=new Troll();
+                JOptionPane.showInputDialog(null,//contenedor del panel
+                null,//opciones de compra
+                "Personajes",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/caballero.jpg"),//imagen
+                null,//opciones del menu
+                opciones[0]);//opcion mas recomendable; 
                 //l.add(p);
                 break;
-            case 4:
+            case "Caballero":
                 p=new Caballero();
+                JOptionPane.showInputDialog(null,//contenedor del panel
+                null,//opciones de compra
+                "Personajes",//titulo panel
+                -1,//opcion icono
+                new ImageIcon("src/images/caballero.jpg"),//imagen
+                null,//opciones del menu
+                opciones[0]);//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear();
                 break;
