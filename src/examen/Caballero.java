@@ -9,18 +9,18 @@ public class Caballero extends Personaje{
     Arma a;
     
     @Override
-    public void pelear(){
+    public void pelear(Personaje p){
         System.out.println("peleando como Encantador");
         //menuArma();
         setArmaPersonaje(darArma());
         if (a instanceof CompEspada) 
-            a.usarArma();
+            a.usarArma(p);
         else if (a instanceof CompCuchillo)
-            a.usarArma();
+            a.usarArma(p);
         else if(a instanceof CompArcoFlecha)
-            a.usarArma();
+            a.usarArma(p);
         else if(a instanceof CompHacha)
-            a.usarArma();
+            a.usarArma(p);
     }      
     
     @Override

@@ -2,5 +2,5 @@ package examen;
 
 public interface Arma {
     
-    public void usarArma();    
+    public void usarArma(Personaje p);    
 }

@@ -4,23 +4,23 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Rey extends Personaje{ 
-
+    Examen ex = new Examen();
+ 
     String [] opcionesArma = {"Espada", "Cuchillo", "Arco y Flecha", "Hacha"};
-    Arma a;
-    
+    Arma a; 
+          
     @Override
-    public void pelear(){
-        System.out.println("peleando como Encantador");
-        //menuArma();
+    public void pelear(Personaje p){
+        System.out.println("peleando como El Mirrey que soy");
         setArmaPersonaje(darArma());
         if (a instanceof CompEspada) 
-            a.usarArma();
+            a.usarArma(p);
         else if (a instanceof CompCuchillo)
-            a.usarArma();
+            a.usarArma(p);
         else if(a instanceof CompArcoFlecha)
-            a.usarArma();
+            a.usarArma(p);
         else if(a instanceof CompHacha)
-            a.usarArma();
+            a.usarArma(p);
     }      
     
     @Override
