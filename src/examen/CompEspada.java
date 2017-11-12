@@ -20,13 +20,11 @@ public class CompEspada implements Arma {
         else if(p instanceof Troll)
             perso="Troll";
         
-        JOptionPane.showInputDialog(null,//contenedor del panel
-        null,//opciones de compra
-        "El Rey",//titulo panel
+        JOptionPane.showMessageDialog(null,//contenedor del panel
+        perso,//opciones de compra
+        perso+"Con Espada",//titulo panel
         -1,//opcion icono
-        new ImageIcon("src/images/"+perso+"ConEspada.jpg"),//imagen
-        null,//opciones del menu
-        null);//opcion mas recomendable;             
+        new ImageIcon("src/images/"+perso+"ConEspada.jpg"));//opcion mas recomendable;             
     }
        
     

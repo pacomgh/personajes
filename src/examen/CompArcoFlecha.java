@@ -19,13 +19,11 @@ public class CompArcoFlecha implements Arma {
         else if(p instanceof Troll)
             perso="Troll";
         
-        JOptionPane.showInputDialog(null,//contenedor del panel
-        null,//opciones de compra
-        "El Rey",//titulo panel
+        JOptionPane.showMessageDialog(null,//contenedor del panel
+        perso,//Etiqueta del nombre del personajeS
+        perso+"Con Arco",//titulo panel
         -1,//opcion icono
-        new ImageIcon("src/images/"+perso+"ConArco.jpg"),//imagen
-        null,//opciones del menu
-        null);//opcion mas recomendable;             
+        new ImageIcon("src/images/"+perso+"ConArco.jpg"));//opcion mas recomendable;             
     }
     
 }

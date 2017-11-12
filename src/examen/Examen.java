@@ -6,7 +6,7 @@ import javax.swing.ImageIcon;
 
 //import java.util.ArrayList;
 
-public class Examen<Tipo> {
+public class Examen {
     
     String [] opciones = {"Rey", "Reina", "Troll", "Caballero"};   
     
@@ -26,49 +26,41 @@ public class Examen<Tipo> {
         switch(menuPersonaje()){
             case "Rey":  
                 p=new Rey();
-                JOptionPane.showInputDialog(null,//contenedor del panel
-                null,//opciones de compra
+                JOptionPane.showMessageDialog(null,//contenedor del panel
+                "Rey",//opciones de compra
                 "El Rey",//titulo panel
                 -1,//opcion icono
-                new ImageIcon("src/images/Rey.png"),//imagen
-                null,//opciones del menu
-                null);//opcion mas recomendable; 
+                new ImageIcon("src/images/Rey.png"));//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear(p);
                 break;
             case "Reina":
                 p=new Reyna();
-                JOptionPane.showInputDialog(null,//contenedor del panel
-                null,//opciones de compra
+                JOptionPane.showMessageDialog(null,//contenedor del panel
+                "Reina",//opciones de compra
                 "Reina",//titulo panel
                 -1,//opcion icono
-                new ImageIcon("src/images/Reina.jpg"),//imagen
-                null,//opciones del menu
-                null);//opcion mas recomendable; 
+                new ImageIcon("src/images/Reina.jpg"));//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear(p);
                 break;
             case "Troll":
                 p=new Troll();
-                JOptionPane.showInputDialog(null,//contenedor del panel
-                null,//opciones de compra
+                JOptionPane.showMessageDialog(null,//contenedor del panel
+                "Troll",//opciones de compra
                 "Personajes",//titulo panel
                 -1,//opcion icono
-                new ImageIcon("src/images/troll.jpg"),//imagen
-                null,//opciones del menu
-                null);//opcion mas recomendable; 
+                new ImageIcon("src/images/troll.jpg"));//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear(p);
                 break;
             case "Caballero":
                 p=new Caballero();
-                JOptionPane.showInputDialog(null,//contenedor del panel
-                null,//opciones de compra
+                JOptionPane.showMessageDialog(null,//contenedor del panel
+                "Caballero",//opciones de compra
                 "Personajes",//titulo panel
                 -1,//opcion icono
-                new ImageIcon("src/images/caballero.jpg"),//imagen
-                null,//opciones del menu
-                null);//opcion mas recomendable; 
+                new ImageIcon("src/images/caballero.jpg"));//opcion mas recomendable; 
                 //l.add(p);
                 p.pelear(p);
                 break;

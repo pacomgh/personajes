@@ -4,15 +4,16 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Rey extends Personaje{ 
-    Examen ex = new Examen();
- 
+    //Opciones a mostrar en eleccion de arma
     String [] opcionesArma = {"Espada", "Cuchillo", "Arco y Flecha", "Hacha"};
     Arma a; 
           
     @Override
     public void pelear(Personaje p){
         System.out.println("peleando como El Mirrey que soy");
+        //colocar el arma
         setArmaPersonaje(darArma());
+        //Ver de que tipo es el arma seleccionada
         if (a instanceof CompEspada) 
             a.usarArma(p);
         else if (a instanceof CompCuchillo)
